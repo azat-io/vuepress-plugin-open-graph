@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/azat-io/vuepress-plugin-open-graph/compare/v1.0.0...v1.1.0) (2023-04-14)
+
+
+### Features
+
+* clean configuration data ([af42b1b](https://github.com/azat-io/vuepress-plugin-open-graph/commit/af42b1b9f337e21c4dc707e873ea5165e34b76e9))
+* drop nodejs v14 support ([6c65bd5](https://github.com/azat-io/vuepress-plugin-open-graph/commit/6c65bd5600bef3bf35ee77da8580c9a23c24479a))
+
 ### 1.0.0 (2023-03-02)
 
 initial release
