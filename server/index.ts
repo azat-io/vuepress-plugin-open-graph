@@ -1,21 +1,20 @@
 import type { Plugin } from '@vuepress/core'
 
 interface OpenGraphPluginOptions {
-  host: string
+  twitterCard?: 'summary_large_image' | 'summary'
   defaultImage?: string
-  twitterCard?: 'summary' | 'summary_large_image'
   twitterSite?: string
+  host: string
 }
 
 export let openGraphPlugin =
   ({
-    defaultImage,
     twitterCard = 'summary',
+    defaultImage,
     twitterSite,
     host,
   }: OpenGraphPluginOptions): Plugin =>
   () => ({
-    name: 'vuepress-plugin-open-graph',
     extendsPage: page => {
       let head = page.frontmatter.head || []
 
@@ -28,7 +27,7 @@ export let openGraphPlugin =
       if (page.frontmatter.description) {
         head.push([
           'meta',
-          { property: 'og:description', content: page.frontmatter.description },
+          { content: page.frontmatter.description, property: 'og:description' },
         ])
       }
 
@@ -38,24 +37,24 @@ export let openGraphPlugin =
         head.push([
           'meta',
           {
-            property: 'article:published_time',
             content: new Date(page.frontmatter.date!).toISOString(),
+            property: 'article:published_time',
           },
         ])
       }
 
       head.push([
         'meta',
-        { property: 'og:url', content: `${host}${page.path}` },
+        { content: `${host}${page.path}`, property: 'og:url' },
       ])
 
       if (page.frontmatter.image) {
         head.push([
           'meta',
-          { property: 'og:image', content: page.frontmatter.image as string },
+          { content: page.frontmatter.image as string, property: 'og:image' },
         ])
       } else if (defaultImage) {
-        head.push(['meta', { property: 'og:image', content: defaultImage }])
+        head.push(['meta', { content: defaultImage, property: 'og:image' }])
       }
 
       if (page.title) {
@@ -66,8 +65,8 @@ export let openGraphPlugin =
         head.push([
           'meta',
           {
-            name: 'twitter:description',
             content: page.frontmatter.description,
+            name: 'twitter:description',
           },
         ])
       }
@@ -76,14 +75,14 @@ export let openGraphPlugin =
         head.push([
           'meta',
           {
-            name: 'twitter:image',
             content: page.frontmatter.image as string,
+            name: 'twitter:image',
           },
         ])
       } else {
         head.push([
           'meta',
-          { name: 'twitter:image', content: '/hero-preview.png' },
+          { content: '/hero-preview.png', name: 'twitter:image' },
         ])
       }
 
@@ -95,4 +94,5 @@ export let openGraphPlugin =
 
       page.frontmatter.head = head
     },
+    name: 'vuepress-plugin-open-graph',
   })
