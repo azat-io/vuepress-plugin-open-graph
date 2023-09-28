@@ -33,14 +33,15 @@ export let openGraphPlugin =
 
       if (!page.frontmatter.layout) {
         head.push(['meta', { property: 'og:type', content: 'article' }])
-
-        head.push([
-          'meta',
-          {
-            content: new Date(page.frontmatter.date!).toISOString(),
-            property: 'article:published_time',
-          },
-        ])
+        if (page.frontmatter.date {
+          head.push([
+            'meta',
+            {
+              content: new Date(page.frontmatter.date!).toISOString(),
+              property: 'article:published_time',
+            },
+          ])
+        }
       }
 
       head.push([
