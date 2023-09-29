@@ -37,7 +37,7 @@ export let openGraphPlugin =
           head.push([
             'meta',
             {
-              content: new Date(page.frontmatter.date!).toISOString(),
+              content: new Date(page.frontmatter.date).toISOString(),
               property: 'article:published_time',
             },
           ])
