@@ -16,7 +16,7 @@ export let openGraphPlugin =
   }: OpenGraphPluginOptions): Plugin =>
   () => ({
     extendsPage: page => {
-      let head = page.frontmatter.head || []
+      let head = page.frontmatter.head ?? []
 
       head.push(['meta', { property: 'og:locale', content: page.lang }])
 
