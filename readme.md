@@ -2,8 +2,9 @@
 
 <img src="https://avatars.githubusercontent.com/u/48539483?s=100" align="right" alt="VuePress" />
 
-![Version](https://img.shields.io/npm/v/vuepress-plugin-open-graph.svg)
-![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-open-graph.svg)
+[![Version](https://img.shields.io/npm/v/vuepress-plugin-open-graph.svg?color=4fb17b&labelColor=2a2f44)](https://npmjs.com/package/vuepress-plugin-open-graph)
+[![Monthly Download](https://img.shields.io/npm/dm/vuepress-plugin-open-graph.svg?color=4fb17b&labelColor=2a2f44)](https://npmjs.com/package/vuepress-plugin-open-graph)
+[![GitHub License](https://img.shields.io/badge/license-MIT-4fb17b.svg?color=4fb17b&labelColor=2a2f44)](https://github.com/azat-io/eslint-plugin-de-morgan/blob/main/license.md)
 
 VuePress v2 plugin for generating open graph meta tags to improve SEO.
 
