@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/azat-io/vuepress-plugin-open-graph/compare/v1.19.0...v1.20.0) (2025-05-15)
+
+
+### Features
+
+* update vuepress to v2.0.0-rc.23 ([1d3a81b](https://github.com/azat-io/vuepress-plugin-open-graph/commit/1d3a81ba9aa24b031c0ccc9478855f1532d54ea2))
+
 ## [1.19.0](https://github.com/azat-io/vuepress-plugin-open-graph/compare/v1.18.0...v1.19.0) (2025-04-30)
 
 
