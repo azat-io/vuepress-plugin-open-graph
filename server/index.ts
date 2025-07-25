@@ -49,10 +49,13 @@ export let openGraphPlugin =
         { content: `${host}${page.path}`, property: 'og:url' },
       ])
 
-      if (page.frontmatter.image) {
+      if (page.frontmatter['image']) {
         head.push([
           'meta',
-          { content: page.frontmatter.image as string, property: 'og:image' },
+          {
+            content: page.frontmatter['image'] as string,
+            property: 'og:image',
+          },
         ])
       } else if (defaultImage) {
         head.push(['meta', { content: defaultImage, property: 'og:image' }])
@@ -72,11 +75,11 @@ export let openGraphPlugin =
         ])
       }
 
-      if (page.frontmatter.image) {
+      if (page.frontmatter['image']) {
         head.push([
           'meta',
           {
-            content: page.frontmatter.image as string,
+            content: page.frontmatter['image'] as string,
             name: 'twitter:image',
           },
         ])
